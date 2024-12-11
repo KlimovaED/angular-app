@@ -1,0 +1,12 @@
+<input type="text" [(ngModel)]="value"/>
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="'1'">One</div>
+  <div *ngSwitchCase="'2'">Two</div>
+  <div *ngSwitchCase="'3'">Three</div>
+  <div *ngSwitchDefault>Uncnow number</div>
+</div>
+
+<h1 [ngClass]="'class1 class2'">Lorem</h1>
+<h1 [ngClass]="{'class2': isClass2}">Lorem 1</h1>
+<h1 [ngClass]="{'class1 class2 ' : isClass2}">Lorem 2</h1>
+<h1 [ngStyle]="{color:'red',marginTop:'100px',opacity:'0.5'}" >Lorem</h1>

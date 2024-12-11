@@ -1,0 +1,17 @@
+<div *ngIf="isLoading">
+  <h1>Loading ...</h1>
+</div>
+
+<ng-container *ngIf="!isLoading">
+<div *ngFor="let el of array;index as i; count as count; even as even" >{{i}} : {{el}} :
+  count : {{count}}-- even:{{even}}</div>
+<div>
+  <div *ngFor="let lesson of lessons">
+    <h2>{{lesson.title}}</h2>
+    <div>
+      <h3>Week grades</h3>
+      <div *ngFor="let grade of lesson.weekGrades">{{grade.grade}}</div>
+    </div>
+  </div>
+</div>
+</ng-container>

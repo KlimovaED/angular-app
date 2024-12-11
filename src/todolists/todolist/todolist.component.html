@@ -1,0 +1,15 @@
+<div class="addItem">
+<input class="input" type="text" [(ngModel)]="title" />
+<button class="btn" (click)="createTodo()">add</button>
+</div>
+<hr/>
+<h1 class="error" *ngIf="!!errorMessage; else content">{{errorMessage}}</h1>
+<ng-template #content>
+<div *ngFor=" let todo of todos$ | async">
+  <div class="container">
+  <p>{{todo.id}} --- {{todo.title}} ---{{todo.order}}</p>
+  <button (click)="deleteTodo(todo.id)">delete</button>
+  </div>
+</div>
+</ng-template>
+

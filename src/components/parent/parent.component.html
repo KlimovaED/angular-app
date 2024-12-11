@@ -1,0 +1,12 @@
+<div>
+  <h1>Parent</h1>
+  <span>{{name}} {{lastName}} from {{address.city}}, {{address.street}}, {{address.house}} </span>
+  <br/>
+  <h3>Math: {{math}}</h3>
+  <h3>Physic: {{physic}}</h3>
+  <inst-child [lastNameProps]="lastName" [address]="address"
+              (sendGradeEvent)="getGrade($event)"
+              (sendInputGradeEvent)="getInputGrade($event)"></inst-child>
+  <h3>{{grades | json}}</h3>
+</div>
+
